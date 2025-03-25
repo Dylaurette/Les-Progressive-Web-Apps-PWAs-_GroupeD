@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille Technologique : Les Progressive Web Apps (PWAs)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Bannière avec slider -->
+  <header class="banner-slider">
+    <div class="slide active">
+      <img src="image1.jpg" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="image2.jpg" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="image3.jpg" alt="Image 3">
+    </div>
+  </header>
+
+  <!-- Titre principal fixé sous le slider -->
+  <div class="fixed-h1">
+    <h1>Veille Technologique : Les Progressive Web Apps (PWAs)</h1>
+  </div>
+
+  <!-- Plan de veille -->
+  <h3 class="plan">Plan de veille</h3>
+
+  <!-- Menu de navigation -->
+  <nav>
+    <ul class="menu">
+      <li class="logo"><img src="logo.png" alt="Logo"></li>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#histoire">Histoire & Évolution</a></li>
+      <li><a href="#fonctionnement">Fonctionnement</a></li>
+      <li><a href="#avantage">Avantages & Cas d'Utilisation</a></li>
+      <li><a href="#integration">Intégration</a></li>
+      <li><a href="#tendance">Tendances Futures</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#annexe">Annexes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main>
+    <div class="wrapper">
+      <!-- Section : Introduction -->
+      <section id="intro" class="section">
+        <h2>Introduction</h2>
+        <p>
+          Les Progressive Web Apps (PWAs) sont une nouvelle génération d'applications web qui combinent le meilleur des sites web et des applications mobiles. Elles offrent une expérience utilisateur fluide, rapide et accessible, sans nécessiter de téléchargement depuis un store.
+        </p>
+      </section>
+
+      <!-- Section : Histoire et Évolution -->
+      <section id="histoire" class="section">
+        <h2>Histoire et Évolution des PWAs</h2>
+        <p>
+          Introduites par Google en 2015 pour améliorer l'expérience mobile, les PWAs se positionnent comme une solution hybride, alliant accessibilité immédiate et performances optimisées.
+        </p>
+      </section>
+
+      <!-- Section : Fonctionnement -->
+      <section id="fonctionnement" class="section">
+        <h2>Fonctionnement Clés des PWAs</h2>
+        <p>
+          Utilisant les standards du web (HTML, CSS, JavaScript), les PWAs offrent une expérience proche de celle des applications natives en garantissant rapidité, fiabilité et interactivité.
+        </p>
+        <ul class="functionality-list">
+          <li><strong>Installation sans Store:</strong> Ajout direct sur l'écran d'accueil.</li>
+          <li><strong>Mode Hors-ligne:</strong> Certaines fonctionnalités restent accessibles sans connexion grâce aux Service Workers.</li>
+          <li><strong>Performances Améliorées:</strong> Chargement rapide via la mise en cache.</li>
+          <li><strong>Notifications Push:</strong> Interaction et engagement accrus.</li>
+          <li><strong>Sécurité:</strong> Fonctionnement sur HTTPS pour une navigation sécurisée.</li>
+        </ul>
+      </section>
+
+      <!-- Section : Avantages et Cas d'Utilisation -->
+      <section id="avantage" class="section">
+        <h2>Avantages et Cas d'Utilisation</h2>
+        <div class="advantages">
+          <h3>Avantages</h3>
+          <p>
+            Les PWAs offrent de nombreux atouts : accessibilité instantanée, rapidité, faible coût de développement et compatibilité sur divers appareils.
+          </p>
+          <ul>
+            <li><strong>Accessibilité:</strong> Pas de téléchargement nécessaire.</li>
+            <li><strong>Performance:</strong> Navigation fluide et rapide.</li>
+            <li><strong>Engagement:</strong> Notifications et intégration sur l'écran d'accueil.</li>
+            <li><strong>Coût:</strong> Développement et maintenance optimisés.</li>
+            <li><strong>Compatibilité:</strong> Fonctionne sur presque tous les navigateurs.</li>
+          </ul>
+        </div>
+        <div class="use-cases">
+          <h3>Cas d'Utilisation</h3>
+          <ul>
+            <li><strong>E-commerce:</strong> Ex : Alibaba a augmenté ses conversions mobiles de 76%.</li>
+            <li><strong>Médias et News:</strong> Ex : Forbes a drastiquement réduit son temps de chargement.</li>
+            <li><strong>Services:</strong> Ex : Twitter Lite consomme moins de données.</li>
+            <li><strong>Réseaux Sociaux:</strong> Ex : Tinder a amélioré l’engagement avec un temps de chargement réduit.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section : Intégration d'une PWA -->
+      <section id="integration" class="section">
+        <h2>Pour les Développeurs : Intégrer une PWA dans un Site</h2>
+        <p>
+          Suis ces étapes pour transformer ton site en PWA :
+        </p>
+        <ol>
+          <li>
+            <strong>Configuration HTTPS:</strong>
+            <p>Un site sécurisé (HTTPS) est indispensable pour les PWAs.</p>
+          </li>
+          <li>
+            <strong>Création du fichier Manifest:</strong>
+            <p>Ce fichier JSON définit les métadonnées de l'application (nom, icônes, couleurs).</p>
+            <pre><code>{
+  "name": "Ma Super PWA",
+  "short_name": "PWA",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}</code></pre>
+            <p>Intègre-le dans ton HTML :</p>
+            <pre><code>&lt;link rel="manifest" href="/manifest.json"&gt;</code></pre>
+          </li>
+          <li>
+            <strong>Implémentation du Service Worker:</strong>
+            <p>Il gère la mise en cache et le mode hors-ligne de l'application.</p>
+            <pre><code>self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open('v1').then(cache => {
+      return cache.addAll([
+        '/',
+        '/index.html',
+        '/styles.css',
+        '/script.js'
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request).then(response => response || fetch(event.request))
+  );
+});</code></pre>
+            <p>Enregistre le Service Worker :</p>
+            <pre><code>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(() => console.log('Service Worker enregistré.'));
+}</code></pre>
+          </li>
+          <li>
+            <strong>Test de la PWA:</strong>
+            <p>Utilise Lighthouse (dans Chrome DevTools) pour vérifier la conformité.</p>
+          </li>
+          <li>
+            <strong>Déploiement:</strong>
+            <p>Héberge ton site sur un serveur sécurisé. Des solutions comme <a href="https://www.netlify.com/">Netlify</a> ou <a href="https://vercel.com/">Vercel</a> sont recommandées.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Section : Tendances et Conclusion -->
+      <section id="tendance" class="section">
+        <h2>Tendances et Évolutions Futures des PWAs</h2>
+        <ul>
+          <li><strong>Amélioration des API Web:</strong> De nouvelles API pour des fonctionnalités avancées.</li>
+          <li><strong>Intégration sur les Stores:</strong> Possibilité de publication sur divers app stores.</li>
+          <li><strong>Adoption Croissante:</strong> De plus en plus d'entreprises adoptent les PWAs.</li>
+          <li><strong>Assistants Vocaux:</strong> Intégration avec Google Assistant, Siri, etc.</li>
+        </ul>
+      </section>
+
+      <!-- Section : Conclusion -->
+      <section id="conclusion" class="section">
+        <h2>Conclusion</h2>
+        <p>
+          Les PWAs représentent l'avenir du web en combinant rapidité, fiabilité et expérience native. Pour les développeurs, elles offrent des opportunités d'innovation tout en répondant aux exigences des utilisateurs modernes.
+        </p>
+      </section>
+
+      <!-- Section : Annexes -->
+      <section id="annexe" class="section">
+        <h2>Annexes</h2>
+        <div class="annex-links">
+          <h3>Liens utiles</h3>
+          <ul>
+            <li><a href="https://web.dev/progressive-web-apps/">Web.dev - Progressive Web Apps</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">MDN Web Docs - PWAs</a></li>
+            <li><a href="https://developers.google.com/web/progressive-web-apps">Google Developers - PWAs</a></li>
+            <li><a href="https://www.freecodecamp.org/news/what-are-progressive-web-apps/">Tutoriel pratique</a></li> 
+            <li><a href="https://web.dev/articles/what-are-pwas">Guide complet sur les PWAs</a></li>
+            <li><a href="https://developers.google.com/web/tools/lighthouse/">Testez votre PWA</a></li>
+            <li><a href="https://pwa.rocks/">Exemples de PWAs</a></li>
+          </ul>
+        </div>
+        <div class="annex-images">
+          <h3>Images Illustratives</h3>
+          <ul>
+            <li><a href="https://www.altexsoft.com/blog/progressive-web-apps/">Architecture PWA</a></li>
+            <li><a href="https://brainhub.eu/library/progressive-web-apps-advantages-disadvantages">Comparaison Site vs PWA</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 - Réalisé par P6-Dev-Web Groupe D</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
